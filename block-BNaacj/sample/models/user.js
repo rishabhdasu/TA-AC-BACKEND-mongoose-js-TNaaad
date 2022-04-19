@@ -9,8 +9,8 @@ var userSchema = new Schema(
     age: { type: Number, default: 0 },
     favorites: [String],
     marks: [Number],
-    password: { type: String, min: 5, max: 15 },
-    createdAt: { type: Date, default: Date },
+    password: { type: String, minlength: 5, length: 15 },
+    createdAt: { type: Date, default: new Date() },
   },
   { timestamps: true }
 );
