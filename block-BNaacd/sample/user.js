@@ -5,8 +5,9 @@ var Schema = mogoose.Schema;
 var app = express();
 
 var userSchema = new Schema({
+  name: String,
   email: { type: String, uppercase: true },
-  age: { type: (Number = 0) },
+  age: { type: Number, default: 0 },
 });
 
 app.listen(4000, () => {
